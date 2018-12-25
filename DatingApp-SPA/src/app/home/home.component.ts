@@ -20,6 +20,10 @@ export class HomeComponent implements OnInit {
     this.registerMode = !this.registerMode;
   }
 
+  cancelRegisterMode(registerMode: boolean) {
+    this.registerMode = registerMode;
+  }
+
   getValues() {
     this.http.get('http://localhost:5000/api/values')
       .subscribe(
